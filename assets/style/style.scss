@@ -269,7 +269,7 @@ section h2 {
   }
   button {
     &:hover {
-      background-color: rgba(0, 39, 130);
+      background-color: rgba(109,30,68);
     }
     transition: background-color 0.5s;
     width: 330px;
@@ -278,7 +278,7 @@ section h2 {
     font-size: 30px;
     font-weight: bold;
     border-radius: 10px;
-    background-color: rgba(0, 39, 130, 0.685);
+    background-color: rgba(109,30,68,.8);
     color: white;
     cursor: pointer;
   }
@@ -337,7 +337,7 @@ footer {
   width: 100%;
   position: fixed;
   z-index: 5;
-  background-color: rgba(82, 66, 59, 0.7);
+  background-color: rgba(1, 43, 45, 0.6);
   top: 0;
   left: 0;
   animation-name: showHeader;
