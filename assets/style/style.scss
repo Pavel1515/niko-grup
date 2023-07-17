@@ -1,0 +1,355 @@
+@font-face {
+  font-weight: 300; /* Соответствует значению normal */
+  font-family: "GothamPro";
+  src: url("../fonts/GothamProLight/GothamProLight.ttf");
+}
+
+@font-face {
+  font-weight: 400; /* Соответствует значению bold */
+  font-family: "GothamPro";
+  src: url("../fonts/GothamProRegular/GothamProRegular.ttf");
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: "GothamPro";
+  src: url("../fonts/GothamProMedium/GothamProMedium.ttf");
+}
+@font-face {
+  font-weight: 700;
+  font-family: "GothamPro";
+  src: url("../fonts/GothamProBold/GothamProBold.ttf");
+}
+@font-face {
+  font-weight: 900;
+  font-family: "GothamPro";
+  src: url("../fonts/GothamProBlack/GothamProBlack.ttf");
+}
+* {
+  font-family: "GothamPro", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  a {
+    text-decoration: none;
+  }
+}
+
+.golovna {
+  overflow: hidden;
+  position: relative;
+  min-height: 600px;
+  .container {
+    position: relative;
+    z-index: 3;
+  }
+}
+.swiper {
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.slide {
+  height: 100%;
+  img {
+    object-fit: cover;
+  }
+}
+
+.black-fon {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  z-index: 2;
+}
+header {
+  .container {
+    padding-top: 10px;
+    font-family: "GothamPro" sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    ul {
+      font-weight: 700;
+      display: flex;
+      list-style-type: none;
+      li {
+        padding: 5px;
+        margin: 5px;
+        a {
+          color: white;
+          &:hover {
+            color: rgb(209, 209, 209);
+          }
+        }
+      }
+    }
+    .logo {
+      filter: grayscale(100%) brightness(100000%);
+      cursor: pointer;
+    }
+  }
+}
+.title {
+  color: white;
+  h2 {
+    color: white;
+    font-family: "GothamPro-Bold";
+    font-weight: 800;
+    margin-top: 50px;
+    font-size: 94px;
+    animation-duration: 2s;
+    text-shadow: 1px 5px 10px black;
+  }
+  p {
+    margin-top: 50px;
+    text-align: right;
+    font-family: "GothamPro";
+    font-size: 24px;
+    animation-duration: 4s;
+    text-shadow: 1px 5px 2px black;
+  }
+}
+.counter {
+  margin-top: 20px;
+  font-family: "GothamPro";
+  color: white;
+  p {
+    font-size: 37px;
+    font-weight: 900;
+  }
+  span {
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+  }
+}
+section h2 {
+  color: #061538;
+  font-size: 37px;
+  font-weight: 500;
+}
+.kvalifikation_list {
+  margin-top: 40px;
+  list-style-type: none;
+  li {
+    margin-top: 20px;
+    font-size: 20px;
+    &::before {
+      content: "✓";
+      margin-right: 10px;
+      color: #061538;
+    }
+  }
+}
+.servise {
+  .main-servise-1 {
+    position: relative;
+    height: 425px;
+    width: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .main-servise-2 {
+    position: relative;
+    height: 225px;
+    width: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .main-servise-3 {
+    position: relative;
+    margin-top: 5px;
+    height: 195px;
+    width: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .main-servise-4 {
+    position: relative;
+    margin-top: 5px;
+    height: 195px;
+    width: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .main-servise {
+    .fons {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: all 0.5s;
+      background-color: rgba(0, 0, 0, 0.517);
+    }
+    .main_box {
+      padding-left: 20px;
+      width: 100%;
+      bottom: 15px;
+      position: absolute;
+      p {
+        color: white;
+        font-weight: 700;
+        font-size: 20px;
+      }
+      a {
+        color: white;
+        transition: all 0.5s;
+        padding: 10px;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.517);
+        opacity: 0;
+      }
+    }
+    &:hover {
+      .fons {
+        background-color: rgba(1, 43, 45, 0.6);
+      }
+      a {
+        opacity: 1;
+        border: 1px solid rgba(255, 255, 255);
+      }
+    }
+  }
+}
+.accordion-button:not(.collapsed) {
+  color: white;
+  background-color: #526e7b;
+}
+.accordion-button:not(.collapsed)::after {
+  background-image: var(--bs-accordion-btn-icon);
+}
+.application {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  background-image: url("../img/Zakarpattya_1920.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  h2 {
+    color: white;
+  }
+}
+.form form {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 25px;
+  input {
+    padding: 15px;
+    border: 1px solid #0f435b;
+    background-color: rgb(209, 209, 209, 0.3);
+    color: white;
+    width: 730px;
+    height: 55px;
+  }
+  textarea {
+    color: white;
+    background-color: rgb(209, 209, 209, 0.3);
+    padding: 15px;
+    border: 1px solid #0f435b;
+    width: 730px;
+  }
+  button {
+    &:hover {
+      background-color: rgba(0, 39, 130);
+    }
+    transition: background-color 0.5s;
+    width: 330px;
+    height: 60px;
+    border: none;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: rgba(0, 39, 130, 0.685);
+    color: white;
+    cursor: pointer;
+  }
+}
+.contacts {
+  background-color: rgb(226, 226, 226);
+}
+footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: white;
+  width: 100%;
+  background-color: #013d40;
+  .logo {
+    filter: grayscale(100%) brightness(100000%);
+  }
+  .maps {
+    iframe {
+      border-radius: 2px;
+    }
+  }
+  a {
+    color: white;
+  }
+}
+.contact {
+  padding-left: 110px;
+  padding-top: 60px;
+}
+.contact li {
+  gap: 5px;
+  a {
+    color: black;
+  }
+}
+.icon-contact {
+  display: flex;
+  gap: 5px;
+}
+
+.icon-contact img {
+  width: 22px;
+  height: 22px;
+}
+.menu-footer {
+  ul {
+    display: flex;
+    list-style-type: none;
+    gap: 40px;
+  }
+  a {
+    color: white;
+  }
+}
+.showHeader {
+  width: 100%;
+  position: fixed;
+  z-index: 5;
+  background-color: rgba(82, 66, 59, 0.7);
+  top: 0;
+  left: 0;
+  animation-name: showHeader;
+  animation-duration: 1s;
+}
+@keyframes showHeader {
+  0% {
+    opacity: 0;
+    top: -70px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
