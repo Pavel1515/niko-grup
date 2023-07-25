@@ -39,12 +39,9 @@
   overflow: hidden;
   position: relative;
   min-height: 600px;
-  .container {
-    position: relative;
-    z-index: 3;
-  }
 }
 .swiper {
+  z-index: 0;
   top: 0;
   left: 0;
   position: absolute;
@@ -73,6 +70,8 @@ header {
     justify-content: space-between;
     align-items: center;
     ul {
+      position: relative;
+      z-index: 2;
       font-weight: 700;
       display: flex;
       list-style-type: none;
@@ -88,12 +87,19 @@ header {
       }
     }
     .logo {
+      position: relative;
+      z-index: 2;
       filter: grayscale(100%) brightness(100000%);
       cursor: pointer;
     }
   }
 }
+.menu_contact {
+  display: none;
+}
 .title {
+  position: relative;
+  z-index: 2;
   color: white;
   h2 {
     color: white;
@@ -114,6 +120,8 @@ header {
   }
 }
 .counter {
+  position: relative;
+  z-index: 2;
   margin-top: 20px;
   font-family: "GothamPro";
   color: white;
@@ -133,17 +141,20 @@ section h2 {
   font-size: 37px;
   font-weight: 500;
 }
+.sertificat {
+  max-width: 10%;
+}
 .kvalifikation_list {
   margin-top: 40px;
   list-style-type: none;
   li {
+    img {
+      width: 25px;
+      margin-bottom: 6px;
+      margin-right: 15px;
+    }
     margin-top: 20px;
     font-size: 20px;
-    &::before {
-      content: "✓";
-      margin-right: 10px;
-      color: #061538;
-    }
   }
 }
 .servise {
@@ -224,9 +235,14 @@ section h2 {
       }
       a {
         opacity: 1;
-        border: 1px solid rgba(255, 255, 255);
+        border: 1px solid rgb(255, 255, 255);
       }
     }
+  }
+}
+.modal-body {
+  img {
+    width: 100%;
   }
 }
 .accordion-button:not(.collapsed) {
@@ -255,21 +271,21 @@ section h2 {
   input {
     padding: 15px;
     border: 1px solid #0f435b;
-    background-color: rgb(209, 209, 209, 0.3);
+    background-color: rgba(209, 209, 209, 0.3);
     color: white;
     width: 730px;
     height: 55px;
   }
   textarea {
     color: white;
-    background-color: rgb(209, 209, 209, 0.3);
+    background-color: rgba(209, 209, 209, 0.3);
     padding: 15px;
     border: 1px solid #0f435b;
     width: 730px;
   }
   button {
     &:hover {
-      background-color: rgba(109,30,68);
+      background-color: rgb(109, 30, 68);
     }
     transition: background-color 0.5s;
     width: 330px;
@@ -278,7 +294,7 @@ section h2 {
     font-size: 30px;
     font-weight: bold;
     border-radius: 10px;
-    background-color: rgba(109,30,68,.8);
+    background-color: rgba(109, 30, 68, 0.8);
     color: white;
     cursor: pointer;
   }
@@ -295,22 +311,34 @@ footer {
   .logo {
     filter: grayscale(100%) brightness(100000%);
   }
-  .maps {
-    iframe {
-      border-radius: 2px;
-    }
-  }
+
   a {
     color: white;
   }
 }
+.maps {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  width: 100%;
+  p {
+    text-align: center;
+  }
+
+  iframe {
+    width: 100%;
+    height: 300px;
+  }
+}
 .contact {
-  padding-left: 110px;
   padding-top: 60px;
+  padding-bottom: 60px;
 }
 .contact li {
   gap: 5px;
+  display: flex;
+  justify-content: center;
   a {
+    font-weight: 700;
     color: black;
   }
 }
@@ -343,6 +371,42 @@ footer {
   animation-name: showHeader;
   animation-duration: 1s;
 }
+.menu-icons {
+  display: none;
+}
+.close {
+  display: none;
+}
+.overflov {
+  overflow: hidden;
+}
+
+//вторая страніца
+.service_img {
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+.service-top-section {
+  position: relative;
+}
+h1 {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 0;
+  color: white;
+}
+.content {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-family: "GothamPro", sans-serif;
+  font-weight: 400;
+  color: #282828;
+}
+
 @keyframes showHeader {
   0% {
     opacity: 0;
@@ -351,5 +415,188 @@ footer {
   100% {
     opacity: 1;
     top: 0;
+  }
+}
+@media (max-width: 1245px) {
+  .maps {
+    iframe {
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 992px) {
+  .swiper {
+    display: none;
+  }
+  .golovna {
+    background-image: url("../img/kyiv.jpeg");
+  }
+  .sertificat {
+    max-width: 25%;
+  }
+  .close {
+    display: block;
+    width: 40px;
+    position: absolute;
+    top: 35px;
+    right: 20px;
+  }
+  .menu-icons {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: 40px;
+    transform: translateX(-20px);
+  }
+  .menu_contact {
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    display: block;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    li {
+      display: flex;
+      gap: 10px;
+      .menu-mesendjer {
+        gap: 5px;
+        display: flex;
+        img {
+          width: 25px;
+        }
+      }
+    }
+  }
+  nav {
+    transition: right 0.5s;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    padding-top: 90px;
+    width: 100%;
+    background-color: #013d40;
+    ul {
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+    }
+  }
+  .open {
+    right: 0;
+  }
+  .contact {
+    padding: 0;
+
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 0;
+    }
+  }
+  .maps {
+    p {
+      text-align: center;
+    }
+  }
+  .logo {
+    img {
+      width: 350px;
+    }
+  }
+}
+@media (max-width: 800px) {
+  .form form {
+    input {
+      width: 80%;
+    }
+    textarea {
+      width: 80%;
+    }
+  }
+  footer {
+    p {
+      font-size: 12px;
+      text-align: center;
+    }
+    .logo {
+      width: 250px;
+    }
+  }
+  .menu-footer {
+    padding-top: 40px;
+    display: flex;
+    justify-content: flex-end;
+    ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .title {
+    h2 {
+      padding-left: 30px;
+      font-size: 58px;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+  .counter {
+    p {
+      font-size: 18px;
+    }
+    span {
+      font-size: 18px;
+    }
+    padding-bottom: 20px;
+  }
+  .golovna {
+    min-height: 400px;
+  }
+  .servise .main-servise-2 {
+    img {
+      height: 225px;
+    }
+  }
+  .servise .main-servise-1 {
+    height: 225px;
+    img {
+      height: 225px;
+    }
+  }
+  .main-servise-3 {
+    img {
+      height: 225px;
+    }
+    margin-top: 0 !important;
+  }
+  .servise .main-servise-4 {
+    margin-top: 0;
+  }
+  .servise {
+    .main-servise .main_box a {
+      opacity: 1;
+    }
+    text-align: center;
+    .main-servise-3 {
+      height: 225px;
+    }
+    .main-servise-4 {
+      height: 225px;
+    }
+    overflow: hidden;
+  }
+  .pad {
+    padding: 0;
+  }
+}
+@media (max-width: 500px) {
+  .counter {
+    text-align: center;
   }
 }

@@ -33,3 +33,18 @@ const swiper = new Swiper(".swiper", {
   loop:true,
   speed:1000,
 });
+
+const menu = document.querySelector('.menu-icons');
+menu.addEventListener('click',()=>{
+  const nav = document.querySelector('nav');
+  nav.classList.add('open')
+  document.querySelector('body').classList.add('overflov')
+  
+})
+const close = document.querySelector('.close');
+close.addEventListener('click',()=>{
+  const nav = document.querySelector('nav');
+  nav.classList.remove('open')
+  document.querySelector('body').classList.remove('overflov')
+  
+})

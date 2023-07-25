@@ -22,6 +22,7 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
+
     <link rel="stylesheet" href="./assets/style/style.css" />
     <title>Niko grup</title>
   </head>
@@ -54,13 +55,67 @@
             <img src="./assets/img/logo4.webp" alt="logo" />
           </div>
           <nav>
-            <ul>
+            <img class="close" src="./assets/img/icons8-close.svg" alt="" />
+            <ul class="menu">
               <li><a href="">Головна</a></li>
               <li><a href="">Про нас</a></li>
               <li><a href="">Наші Послуги</a></li>
-              <li><a href="">Звязатися з нами</a></li>
+              <li><a href="">Контакти</a></li>
             </ul>
+            <div class="menu_contact">
+              <ul>
+                <li>
+                  <a href="">097-427-79-79</a>
+                  <div class="menu-mesendjer">
+                    <a href=""
+                      ><img
+                        src="./assets/img/svg/icons8-viber-white.svg"
+                        alt=""
+                    /></a>
+                    <a href=""
+                      ><img
+                        src="./assets/img/svg/icons8-telegram-white.svg"
+                        alt=""
+                    /></a>
+                  </div>
+                  
+                </li>
+                <li>
+                  <a href="">050-190-57-55</a>
+                  <div class="menu-mesendjer">
+                    <a href=""
+                      ><img
+                        src="./assets/img/svg/icons8-viber-white.svg"
+                        alt=""
+                    /></a>
+                    <a href=""
+                      ><img
+                        src="./assets/img/svg/icons8-telegram-white.svg"
+                        alt=""
+                    /></a>
+                  </div>
+                  
+                </li>
+                <li>
+                  <a href="">063-335-83-99</a>
+                  <div class="menu-mesendjer">
+                    <a href=""
+                      ><img
+                        src="./assets/img/svg/icons8-viber-white.svg"
+                        alt=""
+                    /></a>
+                    <a href=""
+                      ><img
+                        src="./assets/img/svg/icons8-telegram-white.svg"
+                        alt=""
+                    /></a>
+                  </div>
+                 
+                </li>
+              </ul>
+            </div>
           </nav>
+          <img class="menu-icons" src="./assets/img/icons8-меню.svg" alt="" />
         </div>
       </header>
       <div class="container">
@@ -73,15 +128,15 @@
           </p>
         </div>
         <div class="counter row">
-          <div class="col-4">
+          <div class="col-sm-4">
             <p id="experience"></p>
             <span>років досвіду</span>
           </div>
-          <div class="col-4">
+          <div class="col-sm-4">
             <p id="completed"></p>
             <span>завершених проектів</span>
           </div>
-          <div class="col-4">
+          <div class="col-sm-4">
             <p id="registration"></p>
             <span>зареестрованих обьектів нерухомості</span>
           </div>
@@ -92,14 +147,87 @@
       <div class="container">
         <h2 class="mt-5 mb-5 text-center">Наша Кваліфікація</h2>
         <div class="row">
-          <div class="col-5">фото сертификата</div>
-          <div class="col-7">
+          <div class="col-md-6">
+            <img data-bs-toggle="modal" data-bs-target="#exampleModal1" loading="lazy" class="sertificat" src="./assets/img/сертіфікат/свідоцтво Міщенко О.С.jpg" alt="">
+            <img data-bs-toggle="modal" data-bs-target="#exampleModal2" loading="lazy" class="sertificat" src="./assets/img/сертіфікат/0ebcfa81-581e-47b7-aac8-8246e598b655.jpg" alt="">
+            <img data-bs-toggle="modal" data-bs-target="#exampleModal3" loading="lazy" class="sertificat"  src="./assets/img/сертіфікат/Сертификат2.jpg" alt="">
+          <!-- Modal -->
+<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+     
+      <div class="modal-body">
+        <img  loading="lazy"  src="./assets/img/сертіфікат/свідоцтво Міщенко О.С.jpg" alt="">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
+      </div>
+    </div>
+  </div>
+</div>  
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+     
+      <div class="modal-body">
+        <img  loading="lazy"  src="./assets/img/сертіфікат/0ebcfa81-581e-47b7-aac8-8246e598b655.jpg" alt="">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
+      </div>
+    </div>
+  </div>
+</div> 
+<div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+     
+      <div class="modal-body">
+        <img  loading="lazy"  src="./assets/img/сертіфікат/Сертификат2.jpg" alt="">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
+      </div>
+    </div>
+  </div>
+</div> 
+          </div>
+          <div class="col-md-6">
             <ul class="kvalifikation_list">
-              <li>Реєстрація нерухомості</li>
-              <li>Проектно-дозвільна документація</li>
-              <li>Технічна документація</li>
-              <li>Ринок нерухомості</li>
-              <li>Операції по землі</li>
+              <li>
+                <img src="./assets/img/svg/icons8-real-estate-agent-50.png" alt="" />
+                Реєстрація нерухомості 
+              </li>
+              <li>
+                <img
+                  src="./assets/img/svg/icons8-signing-a-document-50.png"
+                  alt=""
+                />Проектна документація
+              </li>
+              <li>
+                <img
+                  src="./assets/img/svg/icons8-approval-50.png"
+                  alt=""
+                />Дозвіл на будівництво
+              </li>
+              <li>
+                <img
+                  src="./assets/img/svg/icons8-architect-50.png"
+                  alt=""
+                />Технічна інвентаризація
+              </li>
+              <li>
+                <img
+                  src="./assets/img/svg/icons8-land-sales-50.png"
+                  alt=""
+                />Ринок нерухомості
+              </li>
+              <li>
+                <img
+                  src="./assets/img/svg/map-svgrepo-com.svg"
+                  alt=""
+                />Операції по землі
+              </li>
             </ul>
           </div>
         </div>
@@ -109,7 +237,7 @@
       <div class="container">
         <h2 class="mt-5 mb-5 text-center">Наші Послуги</h2>
         <div class="row">
-          <div class="col-6 px-1">
+          <div class="col-md-6 px-md-1 p-0">
             <div class="main-servise-1 main-servise">
               <div class="fons"></div>
               <img src="./assets/img/practice-bg-1.jpeg" alt="" />
@@ -119,19 +247,22 @@
               </div>
             </div>
           </div>
-          <div class="col-6 p-0">
+          <div class="col-md-6 p-0">
             <div class="row">
-              <div class="col-12">
+              <div class="col-md-12">
                 <div class="main-servise-2 main-servise">
                   <div class="fons"></div>
-                  <img src="./assets/img/practice-bg-2.jpeg" alt="" />
+                  <img
+                    src="./assets/img/panorams/введення в експлотацию.jpeg"
+                    alt=""
+                  />
                   <div class="main_box">
                     <p>Введення в експлатацію</p>
                     <a href="">Детальніше</a>
                   </div>
                 </div>
               </div>
-              <div class="col-6 pe-0">
+              <div class="col-md-6 pe-0">
                 <div class="main-servise-3 main-servise">
                   <div class="fons"></div>
                   <img src="./assets/img/practice-bg-4.jpeg" alt="" />
@@ -141,10 +272,10 @@
                   </div>
                 </div>
               </div>
-              <div class="col-6 ps-1">
+              <div class="col-md-6 ps-md-1">
                 <div class="main-servise-4 main-servise">
                   <div class="fons"></div>
-                  <img src="./assets/img/practice-bg-1.jpeg" alt="" />
+                  <img src="./assets/img/panorams/самобуд.jpeg" alt="" />
                   <div class="main_box">
                     <p>Узаконити самобуд</p>
                     <a href="">Детальніше</a>
@@ -154,10 +285,10 @@
             </div>
           </div>
         </div>
-        <div class="row p-0 pt-1 ps-1">
-          <div class="col-6 pe-1 ps-0">
+        <div class="row p-md-0 pt-md-1 ps-md-1">
+          <div class="col-md-6 pe-md-1 ps-0">
             <div class="row">
-              <div class="col-12">
+              <div class="col-md-12 pad">
                 <div class="main-servise-2 main-servise">
                   <div class="fons"></div>
                   <img src="./assets/img/practice-bg-2.jpeg" alt="" />
@@ -167,20 +298,20 @@
                   </div>
                 </div>
               </div>
-              <div class="col-6 pe-0">
+              <div class="col-md-6 pe-0">
                 <div class="main-servise-3 main-servise">
                   <div class="fons"></div>
-                  <img src="./assets/img/practice-bg-4.jpeg" alt="" />
+                  <img src="./assets/img/panorams/проект.jpeg" alt="" />
                   <div class="main_box">
                     <p>Проект та документація</p>
                     <a href="">Детальніше</a>
                   </div>
                 </div>
               </div>
-              <div class="col-6 ps-1">
+              <div class="col-md-6 ps-md-1 pad">
                 <div class="main-servise-4 main-servise">
                   <div class="fons"></div>
-                  <img src="./assets/img/practice-bg-1.jpeg" alt="" />
+                  <img src="./assets/img/panorams/амнистія.jpeg" alt="" />
                   <div class="main_box">
                     <p>Будівельна амністія</p>
                     <a href="">Детальніше</a>
@@ -189,14 +320,12 @@
               </div>
             </div>
           </div>
-          <div class="col-6 p-0">
+          <div class="col-md-6 p-0">
             <div class="main-servise-1 main-servise">
               <div class="fons"></div>
               <img src="./assets/img/practice-bg-1.jpeg" alt="" />
               <div class="main_box">
-                <p>
-                  Lorem ipsum dolor sit
-                </p>
+                <p>Lorem ipsum dolor sit</p>
                 <a href="">Детальніше</a>
               </div>
             </div>
@@ -317,8 +446,8 @@
     <section class="contacts">
       <div class="container">
         <h2 class="text-center pt-5 pb-4">Наші контакти</h2>
-        <div class="row">
-          <div class="col-6 contact">
+       
+          <div class="contact">
             <ul>
               <li class="d-flex">
                 <a href="">097-427-79-79</a>
@@ -344,18 +473,20 @@
               <li class="d-flex"><a href="">nikogroupinfo@gmail.com</a></li>
             </ul>
           </div>
-          <div class="col-6 maps">
+        </div>
+          <div class=" maps">
+            <p class="mb-4">Україна. Київ. Вул. Хрещатик, 6 офіс 2</p>
             <iframe
+           
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.4040903343794!2d30.52411211744385!3d50.4521995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce524eec6d71%3A0x8c5c0eec859265ce!2sNIKO%20GROUP!5e0!3m2!1suk!2sua!4v1689185384652!5m2!1suk!2sua"
-              width="600"
-              height="300"
+            
               style="border: 0"
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
-            <p class="mb-4">Україна. Київ. Вул. Хрещатик, 6 офіс 2</p>
-          </div>
+            
+        
         </div>
       </div>
     </section>
