@@ -147,11 +147,26 @@ section h2 {
   font-weight: 500;
 }
 
+.kvalifikation {
+  min-height: 600px;
+  background-image: url("../img/ofis.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.kvalifikation h2 {
+  color: white;
+  text-shadow: 1px 1px 3px black;
+}
+
 .sertificat {
   max-width: 25%;
 }
 
 .kvalifikation_list {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.925);
   margin-top: 40px;
   list-style-type: none;
 }
