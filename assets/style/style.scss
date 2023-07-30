@@ -40,7 +40,7 @@
   position: relative;
   min-height: 600px;
 }
-.swiper {
+.slider-golovna {
   z-index: 0;
   top: 0;
   left: 0;
@@ -141,13 +141,13 @@ section h2 {
   font-size: 37px;
   font-weight: 500;
 }
-.kvalifikation{
+.kvalifikation {
   min-height: 600px;
-  background-image: url('../img/ofis.jpg');
+  background-image: url("../img/ofis.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  h2{
+  h2 {
     color: white;
     text-shadow: 1px 1px 3px black;
   }
@@ -423,7 +423,12 @@ h1 {
 .phone_mobile {
   display: none;
 }
-
+.swiper-button-next {
+  display: none;
+}
+.swiper-button-prev {
+  display: none;
+}
 @keyframes showHeader {
   0% {
     opacity: 0;
@@ -443,13 +448,13 @@ h1 {
 }
 @keyframes mobilPhone {
   0% {
-  transform: scale(1);
+    transform: rotate(15deg);
   }
   50% {
-    transform: scale(1.2);
+    transform: rotate(0deg);
   }
   100% {
-    transform: scale(1);
+    transform: rotate(15deg);
   }
 }
 @media (max-width: 1245px) {
@@ -460,11 +465,19 @@ h1 {
   }
 }
 @media (max-width: 992px) {
+  .counter{
+    .col-sm-4{
+      display: flex;
+      justify-content: center;
+     gap: 10px;
+     flex-wrap: wrap;
+    }
+  }
   .container-img {
     display: flex;
     justify-content: center;
   }
-  .swiper {
+  .slider-golovna {
     display: none;
   }
   .golovna {
@@ -638,27 +651,44 @@ h1 {
     position: fixed;
     z-index: 2;
     bottom: 40px;
-    background-color: #013d40;
+    background-color: rgba(1, 61, 64, 0.6);
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
     border: 1px solid white;
-    width: 150px;
-    height: 150px;
+    width: 80px;
+    height: 80px;
 
     img {
-      width: 70px;
+      width: 50px;
       animation: mobilPhone 3s infinite;
     }
     right: 20px;
-  }
-  .bac {
-   
   }
 }
 @media (max-width: 500px) {
   .counter {
     text-align: center;
   }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #013d40;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #013d40;
 }

@@ -13,9 +13,13 @@ function outNum(num, elem, step, time) {
 
 setTimeout(() => {
   outNum(3700, "registration", 50, 1000);
-  outNum(15, "experience", 1, 1000);
-  outNum(1600, "completed", 50, 1000);
 }, 3000);
+setTimeout(() => {
+  outNum(15, "experience", 1, 1000);
+}, 1000);
+setTimeout(() => {
+  outNum(1600, "completed", 50, 1000);
+}, 2000);
 
 window.onscroll = function showHeaders() {
   const header = document.querySelector(".header");
@@ -25,26 +29,35 @@ window.onscroll = function showHeaders() {
     header.classList.remove("showHeader");
   }
 };
+const menu = document.querySelector(".menu-icons");
+menu.addEventListener("click", () => {
+  const nav = document.querySelector("nav");
+  nav.classList.add("open");
+  document.querySelector("body").classList.add("overflov");
+});
+const close = document.querySelector(".close");
+close.addEventListener("click", () => {
+  const nav = document.querySelector("nav");
+  nav.classList.remove("open");
+  document.querySelector("body").classList.remove("overflov");
+});
 
 const swiper = new Swiper(".swiper", {
   autoplay: {
     delay: 5000,
   },
-  loop:true,
-  speed:1000,
+  loop: true,
+  speed: 1000,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });
-
-const menu = document.querySelector('.menu-icons');
-menu.addEventListener('click',()=>{
-  const nav = document.querySelector('nav');
-  nav.classList.add('open')
-  document.querySelector('body').classList.add('overflov')
-  
-})
-const close = document.querySelector('.close');
-close.addEventListener('click',()=>{
-  const nav = document.querySelector('nav');
-  nav.classList.remove('open')
-  document.querySelector('body').classList.remove('overflov')
-  
-})
+const sliderKlients = new Swiper(".slider-klients", {
+  autoplay: {
+    delay: 2000,
+  },
+  loop: true,
+  speed: 1000,
+  slidesPerView: 2,
+});
