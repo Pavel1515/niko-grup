@@ -429,6 +429,10 @@ h1 {
 .swiper-button-prev {
   display: none;
 }
+.slider-klients {
+  width: 400px;
+  overflow: hidden;
+}
 @keyframes showHeader {
   0% {
     opacity: 0;
@@ -465,12 +469,16 @@ h1 {
   }
 }
 @media (max-width: 992px) {
-  .counter{
-    .col-sm-4{
+  .slider-klients {
+    width:auto;
+    overflow: hidden;
+  }
+  .counter {
+    .col-sm-4 {
       display: flex;
       justify-content: center;
-     gap: 10px;
-     flex-wrap: wrap;
+      gap: 10px;
+      flex-wrap: wrap;
     }
   }
   .container-img {
@@ -671,24 +679,4 @@ h1 {
   .counter {
     text-align: center;
   }
-}
-
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #013d40;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #013d40;
 }

@@ -57,7 +57,16 @@ const sliderKlients = new Swiper(".slider-klients", {
   autoplay: {
     delay: 2000,
   },
+  centeredSlides: true,
   loop: true,
   speed: 1000,
   slidesPerView: 2,
+  spaceBetween: 30,
+  breakpoints: {
+    920: {
+      centeredSlides: true,
+      slidesPerView: 2,
+      spaceBetween: 0,
+    },
+  },
 });
